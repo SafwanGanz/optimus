@@ -1,0 +1,35 @@
+{
+  "name": "optimus-void",
+  "version": "1.0.0",
+  "description": "A lightweight WhatsApp bot for quick replies, smart commands, and simple automation.",
+  "keywords": [
+    "WhatsApp",
+    "Bot",
+    "WhatsAppBot",
+    "bot",
+    "baileys"
+  ],
+  "homepage": "https://github.com/SafwanGanz/optimus-void#readme",
+  "bugs": {
+    "url": "https://github.com/SafwanGanz/optimus-void/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SafwanGanz/optimus-void.git"
+  },
+  "license": "MIT",
+  "author": "SafwanGanz",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.19",
+    "dotenv": "^17.2.1",
+    "pino": "^9.9.0",
+    "qrcode": "^1.5.4",
+    "sqlite3": "^5.1.7"
+  }
+}
