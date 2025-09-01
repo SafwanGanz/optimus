@@ -64,23 +64,31 @@ module.exports = (sock) => {
     
     try {
       const { id, participants, action } = event;
-      
-      logger.info(`Group ${id} participants ${action}: ${participants.join(', ')}`);
-      
-      const metadata = await fetchGroupMetadataWithRetry(sock, id);
-      
+
+      const groupIdFormatted = id.split('@')[0];
+
+      const participantsFormatted = participants.map(p => p.split('@')[0]).join(', ');
+
       switch (action) {
         case 'add':
+          logger.info(`👥 GROUP [${groupIdFormatted}]: Added participant(s): ${participantsFormatted}`);
           break;
         case 'remove':
+          logger.info(`👥 GROUP [${groupIdFormatted}]: Removed participant(s): ${participantsFormatted}`);
           break;
         case 'promote':
+          logger.info(`👥 GROUP [${groupIdFormatted}]: Promoted participant(s) to admin: ${participantsFormatted}`);
           break;
         case 'demote':
+          logger.info(`👥 GROUP [${groupIdFormatted}]: Demoted participant(s) from admin: ${participantsFormatted}`);
           break;
+        default:
+          logger.info(`👥 GROUP [${groupIdFormatted}]: ${action} participant(s): ${participantsFormatted}`);
       }
+      const metadata = await fetchGroupMetadataWithRetry(sock, id);
+    
     } catch (error) {
-      logger.error('Error in group-participants.update handler:', error);
+      logger.error(`Error in group-participants handler: ${error.message || error}`);
     }
   });
 };
