@@ -7,7 +7,7 @@ Optimus is a modular, enterprise-ready WhatsApp bot built with Node.js. It featu
 ## Features
 
 - **Modular Plugin System:** Easily add, remove, or update features via plugins.
-- **Group Management:** Add, remove, promote, demote users, and update group settings.
+- **Group Management:** Remove, promote, demote users, and update group settings.
 - **Moderation Tools:** Ban, mute, and warn users with automated enforcement.
 - **Utilities:** Help, ping, and more for bot management and diagnostics.
 - **Persistent Storage:** Uses SQLite for reliable data storage.
