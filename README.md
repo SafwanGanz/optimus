@@ -27,7 +27,7 @@ Optimus is a modular, enterprise-ready WhatsApp bot built with Node.js. It featu
 
 1. **Clone the repository:**
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/SafwanGanz/optimus-void optimus
    cd optimus
    ```
 
