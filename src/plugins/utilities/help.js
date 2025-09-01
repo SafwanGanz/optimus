@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 function loadAllPlugins() {
-  const pluginDirs = ['admin', 'group', 'moderation', 'utilities'];
+  const pluginDirs = ['admin', 'group', 'moderation', 'utilities', 'media'];
   const pluginRoot = path.join(__dirname, '..');
   let all = [];
   for (const dir of pluginDirs) {
