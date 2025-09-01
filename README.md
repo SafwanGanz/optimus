@@ -168,4 +168,3 @@ If you encounter "couldn't connect" errors when using the pairing code:
 This project is licensed under the MIT License.
 
 ---
-=======
