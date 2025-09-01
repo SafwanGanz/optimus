@@ -13,7 +13,7 @@ module.exports = (sock, saveCreds) => {
     if (connection === 'close') {
       const shouldReconnect = (lastDisconnect.error)?.output?.statusCode !== DisconnectReason.loggedOut;
       logger.info('Connection closed:', lastDisconnect.error, 'Reconnecting:', shouldReconnect);
-      if (shouldReconnect) require('../index')();
+      if (shouldReconnect) require('../../index')();
     } else if (connection === 'open') {
       logger.info('Optimus-Void: Connection opened');
     }
