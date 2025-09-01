@@ -67,23 +67,34 @@ module.exports = (sock) => {
         if (!event || !event.id) continue;
         
         try {
-          logger.info(`Group update for ${event.id}: ${JSON.stringify(event)}`);
-          
-          const metadata = await fetchGroupMetadataWithRetry(sock, event.id);
+          const groupIdFormatted = event.id.split('@')[0];
+          let updateMessage = `🔄 GROUP [${groupIdFormatted}]:`;
           
           if (event.subject) {
-            logger.info(`Group ${event.id} name changed to: ${event.subject}`);
+            updateMessage += ` Name changed to "${event.subject}"`;
           }
           
           if (event.announce !== undefined) {
-            logger.info(`Group ${event.id} announce mode: ${event.announce ? 'on' : 'off'}`);
+            updateMessage += ` Announce mode ${event.announce ? 'ON' : 'OFF'}`;
           }
+          
+          if (event.restrict !== undefined) {
+            updateMessage += ` Restrict mode ${event.restrict ? 'ON' : 'OFF'}`;
+          }
+          
+          if (event.descId) {
+            updateMessage += ` Description updated`;
+          }
+          
+          logger.info(updateMessage);
+  
+          const metadata = await fetchGroupMetadataWithRetry(sock, event.id);
         } catch (groupError) {
-          logger.error(`Error processing group update for ${event.id}:`, groupError);
+          logger.error(`Error processing group update for ${event.id.split('@')[0]}: ${groupError.message || groupError}`);
         }
       }
     } catch (error) {
-      logger.error('Error in groups.update handler:', error);
+      logger.error(`Error in groups update handler: ${error.message || error}`);
     }
   });
 };
