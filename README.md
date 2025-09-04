@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://top4top.io/delfd2cde36091f9af723ab27b77c0aaac1.html" alt="Optimus Void Logo" width="200" height="200" style="border-radius: 40px">
+<img src="https://j.top4top.io/p_3534p2x9q1.png" alt="Optimus Void Logo" width="200" height="200" style="border-radius: 40px">
 
 <h3>A Modular WhatsApp Bot with Rich Features</h3>
 
