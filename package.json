@@ -32,6 +32,7 @@
     "dotenv": "^17.2.1",
     "pino": "^9.9.0",
     "pino-pretty": "^10.3.1",
+    "@dark-yasiya/scrap": "^1.0.1",
     "qrcode": "^1.5.4",
     "sqlite3": "^5.1.7"
   }
