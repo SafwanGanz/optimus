@@ -2,6 +2,41 @@
 
 Optimus is a modular, enterprise-ready WhatsApp bot built with Node.js. It features a robust plugin system, group management, moderation, and utility commands, making it suitable for both personal and business use.
 
+## Deploy to Your Preferred Platform
+
+<div align="center">
+    <table>
+        <tr>
+            <td align="center">
+                <a href="https://heroku.com/deploy?template=https://github.com/SafwanGanz/optimus-void">
+                    <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" height="32">
+                    <br>Deploy to Heroku
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://railway.app/new/template/IS2yRP?referralCode=bINYRC">
+                    <img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32">
+                    <br>Deploy to Railway
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <a href="https://render.com/deploy?repo=https://github.com/SafwanGanz/optimus-void">
+                    <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="32">
+                    <br>Deploy to Render
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://votion.cloud/deploy?repo=https://github.com/SafwanGanz/optimus-void">
+                    <img src="https://votion.cloud/button.svg" alt="Deploy to VotionCloud" height="32">
+                    <br>Deploy to VotionCloud
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
 ## Features
 
 - **Modular Plugin System:** Easily add, remove, or update features via plugins
@@ -181,6 +216,96 @@ module.exports = {
 | video   | Download YouTube video  | `!video <query/url>`     |
 | ytmp3   | Download YouTube audio  | `!ytmp3 <url>`           |
 | ytmp4   | Download YouTube video  | `!ytmp4 <url>`           |
+
+## Deployment Options
+
+### Heroku Deployment
+1. **Create a Heroku account and install Heroku CLI**
+2. **Login to Heroku:**
+   ```sh
+   heroku login
+   ```
+3. **Create a new Heroku app:**
+   ```sh
+   heroku create your-app-name
+   ```
+4. **Add buildpacks:**
+   ```sh
+   heroku buildpacks:add heroku/nodejs
+   ```
+5. **Configure environment variables:**
+   - Go to Settings > Config Vars
+   - Add your environment variables from `.env`
+6. **Deploy:**
+   ```sh
+   git push heroku main
+   ```
+
+### Railway Deployment
+1. **Create a Railway account**
+2. **Install Railway CLI:**
+   ```sh
+   npm i -g @railway/cli
+   ```
+3. **Login to Railway:**
+   ```sh
+   railway login
+   ```
+4. **Initialize project:**
+   ```sh
+   railway init
+   ```
+5. **Add environment variables:**
+   - Go to your project settings
+   - Add variables from your `.env` file
+6. **Deploy:**
+   ```sh
+   railway up
+   ```
+
+### Render Deployment
+1. **Create a Render account**
+2. **Create a new Web Service**
+3. **Connect your repository**
+4. **Configure the service:**
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+5. **Add environment variables:**
+   - Go to Environment > Environment Variables
+   - Add all variables from your `.env` file
+6. **Deploy**
+
+### VotionCloud Deployment (Custom)
+> Note: This section will be customized by the user
+
+Basic setup:
+1. **Create VotionCloud account**
+2. **Configure deployment settings**
+3. **Set environment variables**
+4. **Deploy application**
+
+### Important Deployment Notes
+1. **Environment Variables:**
+   - Always use environment variables for sensitive data
+   - Never commit `.env` file to repository
+   - Set up proper environment variables in your deployment platform
+
+2. **Persistent Storage:**
+   - Configure persistent storage for `auth_info_optimus_void/`
+   - Set up database path for `optimus_void.db`
+   - Regular backups recommended
+
+3. **Security Considerations:**
+   - Use secure environment variables
+   - Enable auto-updates if available
+   - Regular monitoring and maintenance
+   - Set up proper logging
+
+4. **Performance Optimization:**
+   - Configure proper scaling options
+   - Set up monitoring
+   - Configure auto-restart policies
+   - Set up health checks
 
 ## Troubleshooting
 
