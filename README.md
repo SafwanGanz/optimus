@@ -1,8 +1,39 @@
 # Optimus Void WhatsApp Bot
 
-Optimus is a modular, enterprise-ready WhatsApp bot built with Node.js. It features a robust plugin system, group management, moderation, and utility commands, making it suitable for both personal and business use.
+<div align="center">
 
-## Deploy to Your Preferred Platform
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node Version](https://img.shields.io/badge/Node.js-18.0.0+-green.svg)](https://nodejs.org/en/download/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=flat&logo=whatsapp&logoColor=white)](https://wa.me/917306771605)
+[![Stars](https://img.shields.io/github/stars/SafwanGanz/optimus-void?style=social)](https://github.com/SafwanGanz/optimus-void/stargazers)
+
+---
+
+Optimus is a modular, enterprise-ready WhatsApp bot built with Node.js. It features a robust plugin system, group management, moderation, and utility commands.
+
+[Quick Start](#quick-start) • 
+[Features](#features) • 
+[Commands](#available-commands) • 
+[Deployment](#deployment-options) • 
+[Support](#get-help)
+
+</div>
+
+## Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/SafwanGanz/optimus-void.git
+
+# Install dependencies
+cd optimus-void
+npm install
+
+# Start the bot
+npm start
+```
+
+## Deploy Now
 
 <div align="center">
     <table>
@@ -340,4 +371,8 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-Made with ❤️ by Safwan Ganz
+<div align="center">
+    Made with ❤️ by Safwan Ganz
+    <br>
+    Give this repo a ⭐️ if you found it helpful!
+</div>
