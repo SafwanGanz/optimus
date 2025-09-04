@@ -3,5 +3,6 @@ module.exports = [
   require('./insta'),
   require('./ytmp3'),
   require('./ytmp4'),
-  require('./tts')
+  require('./tts'),
+  require('toimg')
 ];
