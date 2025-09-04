@@ -2,7 +2,9 @@
 
 <div align="center">
 
-<img src="https://i.ibb.co/7NY91TMR/Chat-GPT-Image-Sep-4-2025-07-52-01-PM-1.png" alt="Optimus Void Logo" width="200" height="200" style="border-radius: 10px">
+<img src="https://raw.githubusercontent.com/SafwanGanz/optimus-void/main/assets/logo.png" alt="Optimus Void Logo" width="200" height="200" style="border-radius: 40px">
+
+<h3>A Modular WhatsApp Bot with Rich Features</h3>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node Version](https://img.shields.io/badge/Node.js-18.0.0+-green.svg)](https://nodejs.org/en/download/)
