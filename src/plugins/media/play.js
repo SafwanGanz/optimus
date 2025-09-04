@@ -35,5 +35,20 @@ module.exports = {
             { image: { url: data.results[0].thumbnail }, caption: res },
             { quoted: message }
         );
+        try {
+            const res = await dy_scrap.ytmp3(`https://www.youtube.com/watch?v=${data.results[0].videoId}`);
+            const audioUrl = res
+            sock.sendMessage(
+                sender,
+                { audio: { url: res.result.download.url }, mimetype: 'audio/mpeg', ptt: false },
+                { quoted: message }
+            );
+        } catch (error) {
+            return sock.sendMessage(
+                sender,
+                { text: "❌ Failed to download audio. Please try again later." },
+                { quoted: message }
+            );
+        }
     }
 };
