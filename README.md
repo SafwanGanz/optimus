@@ -27,12 +27,11 @@ Optimus is a modular, enterprise-ready WhatsApp bot built with Node.js. It featu
                     <br>Deploy to Render
                 </a>
             </td>
-            <td align="center">
-                <a href="https://votion.cloud/deploy?repo=https://github.com/SafwanGanz/optimus-void">
-                    <img src="https://votion.cloud/button.svg" alt="Deploy to VotionCloud" height="32">
-                    <br>Deploy to VotionCloud
-                </a>
-            </td>
+            <td>
+            <a href="https://wa.me/917306771605?text=I%20want%20to%20deploy%20Optimus%20Void%20Bot">
+  <img src="https://votion.cloud/button.svg" alt="Deploy to VotionCloud" height="40">
+</a>
+</td>
         </tr>
     </table>
 </div>
