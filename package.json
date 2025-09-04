@@ -27,13 +27,16 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "@dark-yasiya/scrap": "^1.0.1",
     "@hapi/boom": "^10.0.1",
     "@whiskeysockets/baileys": "github:WhiskeySockets/Baileys",
     "dotenv": "^17.2.1",
+    "link-preview-js": "^3.1.0",
+    "node-id3": "^0.2.9",
     "pino": "^9.9.0",
     "pino-pretty": "^10.3.1",
-    "@dark-yasiya/scrap": "^1.0.1",
     "qrcode": "^1.5.4",
+    "sharp": "^0.34.3",
     "sqlite3": "^5.1.7"
   }
 }
