@@ -1,23 +1,18 @@
-
 # Optimus Void WhatsApp Bot
 
 Optimus is a modular, enterprise-ready WhatsApp bot built with Node.js. It features a robust plugin system, group management, moderation, and utility commands, making it suitable for both personal and business use.
 
----
-
 ## Features
 
-- **Modular Plugin System:** Easily add, remove, or update features via plugins.
-- **Group Management:** Add, remove, promote, demote users, and update group settings.
-- **Moderation Tools:** Ban, mute, and warn users with automated enforcement.
-- **Media Features:** Play YouTube videos/audio directly in WhatsApp.
-- **Utilities:** Help, ping, and more for bot management and diagnostics.
-- **Persistent Storage:** Uses SQLite for reliable data storage.
-- **Secure Auth:** Stores WhatsApp session and credentials securely.
-- **Multiple Authentication Methods:** Connect via QR code or pairing code.
-- **Extensible:** Easily add new plugins for custom features.
-
----
+- **Modular Plugin System:** Easily add, remove, or update features via plugins
+- **Group Management:** Add, remove, promote, demote users, and update group settings
+- **Moderation Tools:** Ban, mute, and warn users with automated enforcement
+- **Media Features:** Play YouTube videos/audio directly in WhatsApp
+- **Utilities:** Help, ping, and more for bot management and diagnostics
+- **Persistent Storage:** Uses SQLite for reliable data storage
+- **Secure Auth:** Stores WhatsApp session and credentials securely
+- **Multiple Authentication Methods:** Connect via QR code or pairing code
+- **Extensible:** Easily add new plugins for custom features
 
 ## Getting Started
 
@@ -30,8 +25,8 @@ Optimus is a modular, enterprise-ready WhatsApp bot built with Node.js. It featu
 
 1. **Clone the repository:**
    ```sh
-   git clone <your-repo-url>
-   cd optimus
+   git clone https://github.com/SafwanGanz/optimus-void.git
+   cd optimus-void
    ```
 
 2. **Install dependencies:**
@@ -40,131 +35,182 @@ Optimus is a modular, enterprise-ready WhatsApp bot built with Node.js. It featu
    ```
 
 3. **Configure the bot:**
-   - Edit `src/config/config.js` to set your command prefix and other settings.
-   - Place your WhatsApp authentication files in the `auth_info_optimus_void/` directory (see below for first-time login).
+   - Edit `.env` file to configure your settings:
+     ```env
+     BOT_PREFIX=!
+     DB_PATH=./optimus_void.db
+     BOT_NAME=Optimus-Void
+     MENU_IMAGE_URL=https://i.ibb.co/HpKQ6KTc/pic.jpg
+     OWNER_NAME=Your Name
+     ```
 
-4. **First-time WhatsApp Login:**
-   - On first run, the bot will prompt you to choose between QR code or pairing code authentication.
-   - For QR code: Scan the displayed QR with your WhatsApp app's linked devices feature.
-   - For pairing code: Enter your phone number, then input the displayed code in your WhatsApp app.
-   - The session will be saved for future runs.
-
-5. **Start the bot:**
+4. **Start the bot:**
    ```sh
    # On Windows
-   start.bat
+   npm start
    
    # On Linux/Mac
-   ./start.sh
+   npm start
    ```
 
----
+## Creating Plugins
 
-## Authentication Methods
+### Plugin Structure
+Plugins are organized in the following directories under `src/plugins/`:
+- `admin/` - Administrative commands
+- `group/` - Group management features
+- `moderation/` - Moderation tools
+- `utilities/` - Utility functions
+- `media/` - Media handling features
 
-### QR Code Authentication (Traditional Method)
-1. Start the bot and select option 1 when prompted
-2. Open WhatsApp on your phone
-3. Go to Settings > Linked Devices > Link a Device
-4. Scan the QR code displayed in the terminal
+### Creating a New Plugin
+1. Choose the appropriate directory for your plugin
+2. Create a new .js file (e.g., `mycommand.js`)
+3. Use this template:
 
-### Pairing Code Authentication (New Method)
-1. Start the bot and select option 2 when prompted
-2. Enter your phone number with country code (e.g., 919876543210)
-3. Open WhatsApp on your phone
-4. Go to Settings > Linked Devices > Link a Device
-5. Tap "Link with phone number" at the bottom
-6. Enter the 8-digit pairing code displayed in the terminal
+```javascript
+const config = require('../../config/config');
 
-> ⚠️ **IMPORTANT:** You can connect only one device at a time when using pairing code authentication.
+module.exports = {
+    command: 'commandname',
+    description: 'Brief description of what the command does',
+    usage: `${config.prefix}commandname <param1> <param2>`,
+    execute: async (sock, message, args) => {
+        try {
+            // Your command logic here
+            // sock: WhatsApp connection socket
+            // message: Message object containing details about the command
+            // args: Array of command arguments
+            
+            // Send a reply
+            return sock.sendMessage(message.key.remoteJid, { 
+                text: 'Your response here' 
+            }, { 
+                quoted: message 
+            });
+        } catch (error) {
+            console.error('Error in commandname:', error);
+            return sock.sendMessage(message.key.remoteJid, { 
+                text: 'An error occurred!' 
+            }, { 
+                quoted: message 
+            });
+        }
+    }
+};
+```
 
-> ❗ **IMPORTANT NOTE:** If the bot doesn't restart automatically after entering the pairing code, you may need to restart it manually.
+### Plugin Parameters
+- `command`: The command name (without prefix)
+- `description`: Brief description of what the command does
+- `usage`: How to use the command (with parameters if any)
+- `execute`: Async function that runs when command is called
+  - `sock`: WhatsApp connection socket
+  - `message`: Message object containing:
+    - `key.remoteJid`: Chat ID
+    - `key.fromMe`: If message is from bot
+    - `key.participant`: Sender's ID in groups
+  - `args`: Array of command arguments
 
----
+### Example Plugin
+Here's a simple greeting plugin:
 
-## Usage
+```javascript
+// src/plugins/utilities/greet.js
+const config = require('../../config/config');
 
-- Interact with the bot in any WhatsApp group or direct chat where it is a participant.
-- Use the configured prefix (default: `!`) before each command.
-- Example: `!help` to list all available commands.
+module.exports = {
+    command: 'greet',
+    description: 'Sends a greeting message',
+    usage: `${config.prefix}greet [name]`,
+    execute: async (sock, message, args) => {
+        const name = args.join(' ') || 'there';
+        return sock.sendMessage(message.key.remoteJid, { 
+            text: `Hello, ${name}! 👋` 
+        }, { 
+            quoted: message 
+        });
+    }
+};
+```
 
-### Core Commands
+## Available Commands
 
-| Command      | Description                        | Usage                        |
-|--------------|------------------------------------|------------------------------|
-| help         | List all available commands        | `!help`                      |
-| ping         | Check bot response time            | `!ping`                      |
-| add          | Add users to the group             | `!add <phone_number>`        |
-| remove       | Remove users from the group        | `!remove <phone_number>`     |
-| promote      | Promote users to admin             | `!promote <phone_number>`    |
-| demote       | Demote users from admin            | `!demote <phone_number>`     |
-| settings     | Update group settings              | `!settings <type> on/off`    |
-| create       | Create a new group                 | `!create <name> <number>`    |
-| leave        | Leave the group                    | `!leave`                     |
-| invite       | Generate group invite link         | `!invite`                    |
-| info         | Get group information              | `!info`                      |
-| mute         | Mute or unmute the group           | `!mute <on/>off>`            |
-| ban          | Ban users from the group           | `!ban <phone_number>`        |
-| warn         | Warn users in the group            | `!warn <phone_number>`       |
-| play         | Play YouTube videos/audio          | `!play <YouTube URL/query>`  |
+### Admin Commands
+| Command   | Description               | Usage                     |
+|-----------|---------------------------|---------------------------|
+| broadcast | Broadcast a message       | `!broadcast <message>`    |
+| eval      | Evaluate JS code         | `!eval <code>`           |
+| restart   | Restart the bot          | `!restart`               |
 
----
+### Group Commands
+| Command  | Description                | Usage                      |
+|----------|----------------------------|----------------------------|
+| add      | Add member to group        | `!add <number>`           |
+| kick     | Remove member from group   | `!kick <@mention>`        |
+| promote  | Promote to admin          | `!promote <@mention>`     |
+| demote   | Demote from admin         | `!demote <@mention>`      |
+| setname  | Change group name         | `!setname <new name>`     |
+| setdesc  | Change group description  | `!setdesc <description>`  |
+| tagall   | Mention all members       | `!tagall [message]`       |
+| link     | Get group invite link     | `!link`                   |
+| revoke   | Reset group invite link   | `!revoke`                |
+
+### Moderation Commands
+| Command | Description              | Usage                     |
+|---------|--------------------------|---------------------------|
+| warn    | Warn a member           | `!warn <@mention>`        |
+| unwarn  | Remove warning          | `!unwarn <@mention>`      |
+| warnings| Check warnings          | `!warnings [@mention]`    |
+| ban     | Ban member from bot     | `!ban <@mention>`         |
+| unban   | Unban member           | `!unban <@mention>`       |
+
+### Utility Commands
+| Command | Description              | Usage                     |
+|---------|--------------------------|---------------------------|
+| help    | Show command list       | `!help [command]`         |
+| ping    | Check bot response      | `!ping`                   |
+| info    | Show bot info           | `!info`                   |
+| sticker | Create sticker          | `!sticker [caption]`      |
+| owner   | Show bot owner info     | `!owner`                  |
+
+### Media Commands
+| Command | Description              | Usage                     |
+|---------|--------------------------|---------------------------|
+| play    | Play YouTube audio      | `!play <query/url>`      |
+| video   | Download YouTube video  | `!video <query/url>`     |
+| ytmp3   | Download YouTube audio  | `!ytmp3 <url>`           |
+| ytmp4   | Download YouTube video  | `!ytmp4 <url>`           |
 
 ## Troubleshooting
 
-### Pairing Code Connection Issues
-If you encounter "couldn't connect" errors when using the pairing code:
+### Common Issues
+1. **Connection Problems**
+   - Check your internet connection
+   - Delete `auth_info_optimus_void` and reconnect
+   - Update WhatsApp on your phone
 
-1. **Phone Number Format:** Make sure to enter your phone number with country code but without the '+' symbol (e.g., 919876543210 not +919876543210)
-2. **WhatsApp Version:** Ensure your WhatsApp app is updated to the latest version
-3. **Try QR Code Method:** If pairing code fails, the bot will automatically fall back to QR code authentication
-4. **Connection Issues:** Make sure you have a stable internet connection
-5. **Manual Restart:** If the bot shows "restart required" but doesn't restart automatically, restart it manually
-6. **Limited Connections:** Remember that pairing code authentication only supports one connected device at a time
+2. **Command Not Working**
+   - Check if command syntax is correct
+   - Verify bot has required permissions
+   - Check console for error messages
 
-### Common Errors
-
-| Error                      | Solution                                                    |
-|----------------------------|-------------------------------------------------------------|
-| MODULE_NOT_FOUND           | Make sure all dependencies are installed with `npm install` |
-| Connection closed          | Check your internet connection and restart the bot          |
-| Logged out from WhatsApp   | Re-authenticate using QR code or pairing code              |
-| Auth State Corrupted       | Delete `auth_info_optimus_void` folder and re-authenticate |
-| Restart required           | The bot will restart automatically or restart it manually   |
-
----
-
-## Deployment
-
-### Local/Development
-- Run `npm start` to launch the bot locally.
-- Use a process manager like [PM2](https://pm2.keymetrics.io/) for auto-restart and monitoring:
-  ```sh
-  npm install -g pm2
-  pm2 start npm --name optimus -- start
-  pm2 save
-  pm2 startup
-  ```
-
-### Production/Enterprise
-- Deploy on a secure server (VPS, cloud instance, or container).
-- Use environment variables and secrets management for sensitive data.
-- Set up automated backups for `optimus_void.db` and `auth_info_optimus_void/`.
-- Monitor logs and health with PM2, Docker, or your preferred orchestration tool.
-- Regularly update dependencies and plugins for security.
-
----
-
-## Extending the Bot
-
-- Add new plugins in the `src/plugins/` directory.
-- Each plugin should export an object with `command`, `description`, `usage`, and `execute`.
-- Register new plugins in the appropriate `index.js` file.
-
----
+3. **Plugin Loading Issues**
+   - Verify plugin file is in correct directory
+   - Check for syntax errors
+   - Ensure all required fields are exported
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contributing
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
 
 ---
+
+Made with ❤️ by Safwan Ganz
