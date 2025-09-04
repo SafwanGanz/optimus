@@ -2,6 +2,8 @@
 
 <div align="center">
 
+<img src="https://i.ibb.co/HpKQ6KTc/pic.jpg" alt="Optimus Void Logo" width="200" height="200" style="border-radius: 10px">
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node Version](https://img.shields.io/badge/Node.js-18.0.0+-green.svg)](https://nodejs.org/en/download/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=flat&logo=whatsapp&logoColor=white)](https://wa.me/917306771605)
