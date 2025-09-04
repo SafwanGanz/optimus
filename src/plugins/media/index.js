@@ -4,5 +4,5 @@ module.exports = [
   require('./ytmp3'),
   require('./ytmp4'),
   require('./tts'),
-  require('toimg')
+  require('./toimg')
 ];
