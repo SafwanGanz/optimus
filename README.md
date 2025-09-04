@@ -41,11 +41,13 @@ npm start
             <td align="center">
                 <a href="https://heroku.com/deploy?template=https://github.com/SafwanGanz/optimus-void">
                     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" height="32">
+                    <br>Deploy to Heroku
                 </a>
             </td>
             <td align="center">
                 <a href="https://railway.app/new/template/IS2yRP?referralCode=bINYRC">
                     <img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32">
+                    <br>Deploy to Railway
                 </a>
             </td>
         </tr>
@@ -53,17 +55,18 @@ npm start
             <td align="center">
                 <a href="https://render.com/deploy?repo=https://github.com/SafwanGanz/optimus-void">
                     <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="32">
+                    <br>Deploy to Render
                 </a>
             </td>
-            <td>
-    <a href="https://wa.me/917306771605?text=I%20want%20to%20deploy%20Optimus%20Void%20Bot" 
-   style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;
-          background:#25D366;color:white;text-decoration:none;
-          font-family:sans-serif;font-size:16px;font-weight:bold;
-          border-radius:6px;">
-  <span style="background:white;color:#25D366;font-weight:bold;
-               width:24px;height:24px;display:flex;align-items:center;
-               justify-content:ce
+            <td align="center">
+                <a href="https://wa.me/917306771605">
+                    <img src="https://img.shields.io/badge/VotionCloud-Deploy%20Now-blue?style=for-the-badge&logo=v" alt="Deploy to VotionCloud" height="32">
+                    <br>Deploy to VotionCloud
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
 
 </td>
         </tr>
