@@ -59,7 +59,7 @@ npm start
             <td align="center">
                 <a href="https://render.com/deploy?repo=https://github.com/SafwanGanz/optimus-void">
                     <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="32">
-                    <br>🎨 Render Studios
+                    <br>Deploy
                 </a>
             </td>
             <td align="center">
