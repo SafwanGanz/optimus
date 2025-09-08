@@ -1,7 +1,7 @@
 const store = require('../utils/store');
 const logger = require('../utils/logger');
 const { Boom } = require('@hapi/boom');
-const WelcomeMessage = require('../functions/welcome');
+const WelcomeMessage = require('@SafwanGanz/void-welcomer');
 const { getWelcomeEnabled } = require('../utils/database');
 const axios = require('axios');
 
