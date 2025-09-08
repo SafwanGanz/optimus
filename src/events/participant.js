@@ -1,6 +1,9 @@
 const store = require('../utils/store');
 const logger = require('../utils/logger');
 const { Boom } = require('@hapi/boom');
+const WelcomeMessage = require('../functions/welcome');
+const { getWelcomeEnabled } = require('../utils/database');
+const axios = require('axios');
 
 const RATE_LIMIT_QUEUE = new Map();
 const MAX_RETRY_ATTEMPTS = 3;
@@ -72,6 +75,44 @@ module.exports = (sock) => {
       switch (action) {
         case 'add':
           logger.info(`👥 GROUP [${groupIdFormatted}]: Added participant(s): ${participantsFormatted}`);
+          const welcomeEnabled = await getWelcomeEnabled(id);
+          if (welcomeEnabled) {
+            const metadata = await fetchGroupMetadataWithRetry(sock, id);
+            const groupName = metadata.subject || 'The Void Collective';
+            for (const participant of participants) {
+              try {
+                const participantJid = participant;
+                const participantNumber = participant.split('@')[0];
+                let name = participantNumber;
+                let profileBuffer = null;
+                try {
+                  const contact = await sock.getContact(participantJid);
+                  name = contact.notify || contact.vname || participantNumber;
+                } catch (e) {
+                  logger.debug(`Could not get contact for ${participantJid}`);
+                }
+                try {
+                  const profileUrl = await sock.profilePictureUrl(participantJid, 'image');
+                  if (profileUrl) {
+                    const response = await axios.get(profileUrl, { responseType: 'arraybuffer' });
+                    profileBuffer = Buffer.from(response.data);
+                  }
+                } catch (e) {
+                  logger.debug(`Could not get profile picture for ${participantJid}`);
+                }
+                const wm = new WelcomeMessage()
+                  .setName(name)
+                  .setGroupName(groupName);
+                if (profileBuffer) {
+                  wm.setProfile(profileBuffer);
+                }
+                const buffer = await wm.generate();
+                await sock.sendMessage(id, { image: buffer, caption: `Welcome @${participantNumber}!`, mentions: [participantJid] });
+              } catch (error) {
+                logger.error(`Error sending welcome message for ${participant}: ${error.message}`);
+              }
+            }
+          }
           break;
         case 'remove':
           logger.info(`👥 GROUP [${groupIdFormatted}]: Removed participant(s): ${participantsFormatted}`);
