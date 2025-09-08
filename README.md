@@ -37,40 +37,32 @@ cd optimus-void && npm install
 npm start
 ```
 
-## 🚀 Instant Deployment Matrix
+## � Docker Deployment
 
-<div align="center">
-    <table>
-        <tr>
-            <td align="center">
-                <a href="https://heroku.com/deploy?template=https://github.com/SafwanGanz/optimus-void">
-                    <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" height="32">
-                    <br>🌐 Heroku Cloud
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://railway.app/new/template/IS2yRP?referralCode=bINYRC">
-                    <img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32">
-                    <br>🚂 Railway Express
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">
-                <a href="https://render.com/deploy?repo=https://github.com/SafwanGanz/optimus-void">
-                    <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="32">
-                    <br>🎨 Render Studios
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://wa.me/917306771605?text=Hi!%20I%20would%20like%20to%20get%20access%20to%20deploy%20Optimus%20Void%20on%20VotionCloud">
-                    <img src="https://img.shields.io/badge/VotionCloud-Request%20Access-blue?style=for-the-badge&logo=v" alt="Request VotionCloud Access" height="32">
-                    <br>☁️ VotionCloud Quantum
-                </a>
-            </td>
-        </tr>
-    </table>
-</div>
+### Using Docker Compose
+```bash
+# Build and run with Docker Compose
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop the bot
+docker-compose down
+```
+
+### Using Docker Directly
+```bash
+# Build the image
+docker build -t optimus-void .
+
+# Run the container
+docker run -d --name optimus-void-bot \
+  -v $(pwd)/auth_info_optimus_void:/app/auth_info_optimus_void \
+  -v $(pwd)/optimus_void.db:/app/optimus_void.db \
+  -p 3000:3000 \
+  optimus-void
+```
 
 ## 🌟 Cyber Capabilities
 
@@ -256,9 +248,27 @@ module.exports = {
 | remix   | Media Cyber Recomposition | `!remix [reply]`         |
 
 
-## Deployment Options
+## 🚀 Deployment Options
 
-### Heroku Deployment
+### 🐳 Docker Deployment
+1. **Install Docker and Docker Compose**
+2. **Clone the repository:**
+   ```sh
+   git clone https://github.com/SafwanGanz/optimus-void.git
+   cd optimus-void
+   ```
+3. **Configure environment variables:**
+   - Copy `.env.example` to `.env` and fill in your values
+4. **Deploy with Docker Compose:**
+   ```sh
+   docker-compose up -d
+   ```
+5. **Monitor logs:**
+   ```sh
+   docker-compose logs -f
+   ```
+
+### 🌐 Heroku Deployment
 1. **Create a Heroku account and install Heroku CLI**
 2. **Login to Heroku:**
    ```sh
@@ -302,20 +312,44 @@ module.exports = {
    railway up
    ```
 
-### Render Deployment
+### 🎨 Render Deployment
 1. **Create a Render account**
-2. **Create a new Web Service**
-3. **Connect your repository**
-4. **Configure the service:**
-   - Build Command: `npm install`
-   - Start Command: `npm start`
-5. **Add environment variables:**
-   - Go to Environment > Environment Variables
-   - Add all variables from your `.env` file
-6. **Deploy**
+2. **Connect your repository**
+3. **Use the render.yaml blueprint**
+4. **Configure environment variables**
+5. **Deploy**
 
-### VotionCloud Deployment (Custom)
-> Note: This section will be customized by the user
+### ⚡ Vercel Deployment
+1. **Create a Vercel account**
+2. **Connect your repository**
+3. **Configure vercel.json**
+4. **Set environment variables**
+5. **Deploy** (Note: May require serverless adaptation)
+
+### 🚂 Railway Deployment
+1. **Create a Railway account**
+2. **Install Railway CLI:**
+   ```sh
+   npm i -g @railway/cli
+   ```
+3. **Login to Railway:**
+   ```sh
+   railway login
+   ```
+4. **Initialize project:**
+   ```sh
+   railway init
+   ```
+5. **Add environment variables:**
+   - Go to your project settings
+   - Add variables from your `.env` file
+6. **Deploy:**
+   ```sh
+   railway up
+   ```
+
+### ☁️ VotionCloud Deployment (Custom)
+> *Advanced quantum deployment for enterprise neural networks*
 
 Basic setup:
 1. **Create VotionCloud account**
@@ -378,7 +412,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ---
 
 <div align="center">
-    <h3>⚡ Built with Quantum Love by Safwan Ganz ⚡</h3>
+    <h3>⚡ Built with Love by Safwan Ganz ⚡</h3>
     <p>⭐ Star this cyber network if it enhances your reality! ⭐</p>
     <br>
     <img src="https://img.shields.io/badge/Made%20in-2035-blue?style=for-the-badge&logo=future&logoColor=white" alt="Made in 2035">
