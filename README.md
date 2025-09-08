@@ -1,43 +1,43 @@
-# Optimus Void WhatsApp Bot
+# 🚀 Optimus Void: Next-Gen WhatsApp Bot (2035 Edition)
 
 <div align="center">
 
-<img src="https://j.top4top.io/p_3534p2x9q1.png" alt="Optimus Void Logo" width="200" height="200" style="border-radius: 40px">
+<img src="https://j.top4top.io/p_3534p2x9q1.png" alt="Optimus Void Logo" width="200" height="200" style="border-radius: 40px; box-shadow: 0 0 20px rgba(147, 0, 211, 0.5);">
 
-<h3>A Modular WhatsApp Bot with Rich Features</h3>
+<h1>⚡ Cyber-Enhanced Automation for WhatsApp ⚡</h1>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node Version](https://img.shields.io/badge/Node.js-18.0.0+-green.svg)](https://nodejs.org/en/download/)
+[![Node Version](https://img.shields.io/badge/Node.js-24.0.0+-brightgreen.svg)](https://nodejs.org/en/download/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=flat&logo=whatsapp&logoColor=white)](https://wa.me/917306771605)
+[![Quantum Ready](https://img.shields.io/badge/Quantum-Ready-9B59B6?style=flat&logo=atom&logoColor=white)](https://github.com/SafwanGanz/optimus-void)
 [![Stars](https://img.shields.io/github/stars/SafwanGanz/optimus-void?style=social)](https://github.com/SafwanGanz/optimus-void/stargazers)
 
 ---
 
-Optimus is a modular, enterprise-ready WhatsApp bot built with Node.js. It features a robust plugin system, group management, moderation, and utility commands.
+> *Enter the cyber age of messaging. Optimus Void leverages quantum computing principles and advanced automation to deliver unparalleled conversational experiences.*
 
-[Quick Start](#quick-start) • 
-[Features](#features) • 
-[Commands](#available-commands) • 
-[Deployment](#deployment-options) • 
-[Support](#get-help)
+[🛠️ Quick Deploy](#quick-deploy) • 
+[🌟 Features](#features) • 
+[🤖 Commands](#available-commands) • 
+[🚀 Deployment](#deployment-options) • 
+[📞 Support](#get-help)
 
 </div>
 
-## Quick Start
+## 🛠️ Quick Deploy
 
 ```bash
-# Clone the repository
+# Cyber Network Initialization
 git clone https://github.com/SafwanGanz/optimus-void.git
 
-# Install dependencies
-cd optimus-void
-npm install
+# Dependency Injection
+cd optimus-void && npm install
 
-# Start the bot
+# Quantum Boot Sequence
 npm start
 ```
 
-## Deploy Now
+## 🚀 Instant Deployment Matrix
 
 <div align="center">
     <table>
@@ -45,13 +45,13 @@ npm start
             <td align="center">
                 <a href="https://heroku.com/deploy?template=https://github.com/SafwanGanz/optimus-void">
                     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" height="32">
-                    <br>Deploy to Heroku
+                    <br>🌐 Heroku Cloud
                 </a>
             </td>
             <td align="center">
                 <a href="https://railway.app/new/template/IS2yRP?referralCode=bINYRC">
                     <img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32">
-                    <br>Deploy to Railway
+                    <br>🚂 Railway Express
                 </a>
             </td>
         </tr>
@@ -59,109 +59,99 @@ npm start
             <td align="center">
                 <a href="https://render.com/deploy?repo=https://github.com/SafwanGanz/optimus-void">
                     <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="32">
-                    <br>Deploy to Render
+                    <br>🎨 Render Studios
                 </a>
             </td>
             <td align="center">
                 <a href="https://wa.me/917306771605?text=Hi!%20I%20would%20like%20to%20get%20access%20to%20deploy%20Optimus%20Void%20on%20VotionCloud">
                     <img src="https://img.shields.io/badge/VotionCloud-Request%20Access-blue?style=for-the-badge&logo=v" alt="Request VotionCloud Access" height="32">
-                    <br>Request VotionCloud Access
+                    <br>☁️ VotionCloud Quantum
                 </a>
             </td>
         </tr>
     </table>
 </div>
 
-## Features
+## 🌟 Cyber Capabilities
 
-- **Modular Plugin System:** Easily add, remove, or update features via plugins
-- **Group Management:** Add, remove, promote, demote users, and update group settings
-- **Moderation Tools:** Ban, mute, and warn users with automated enforcement
-- **Media Features:** Play YouTube videos/audio directly in WhatsApp
-- **Utilities:** Help, ping, and more for bot management and diagnostics
-- **Persistent Storage:** Uses SQLite for reliable data storage
-- **Secure Auth:** Stores WhatsApp session and credentials securely
-- **Multiple Authentication Methods:** Connect via QR code or pairing code
-- **Extensible:** Easily add new plugins for custom features
+- **⚛️ Quantum Plugin Architecture:** Modular system with infinite scalability
+- **🎯 Advanced Group Management:** Automated user hierarchy and settings control
+- **🛡️ Cyber Moderation Tools:** Intelligent ban, mute, and warning systems
+- **🎵 Holographic Media Processing:** Next-gen audio/video synthesis and streaming
+- **🔧 Cyber Utilities:** Advanced diagnostics and management tools
+- **💾 Quantum Storage:** Secure data persistence with SQLite
+- **🔒 Cyber Security:** Encrypted session and credential management
+- **🔗 Multi-Auth Protocols:** Seamless QR and pairing authentication
+- **🔮 Future-Proof Design:** Built for 2045+ compatibility
 
-## Getting Started
+## 🚀 Cyber Awakening
 
-### Prerequisites
-- Node.js v18 or higher (tested on Node.js v24)
-- npm (Node Package Manager)
-- WhatsApp account (for bot authentication)
+### System Requirements
+- **Node.js v24+** (Quantum-enhanced runtime)
+- **npm** (Cyber Package Manager)
+- **WhatsApp Account** (Bio-linked authentication)
 
-### Installation
+### Installation Protocol
 
-1. **Clone the repository:**
+1. **Clone Cyber Repository:**
    ```sh
    git clone https://github.com/SafwanGanz/optimus-void.git
    cd optimus-void
    ```
 
-2. **Install dependencies:**
+2. **Inject Dependencies:**
    ```sh
    npm install
    ```
 
-3. **Configure the bot:**
-   - Edit `.env` file to configure your settings:
-     ```env
-     BOT_PREFIX=!
-     DB_PATH=./optimus_void.db
-     BOT_NAME=Optimus-Void
-     MENU_IMAGE_URL=https://i.ibb.co/HpKQ6KTc/pic.jpg
-     OWNER_NAME=Your Name
-     ```
+3. **Configure Cyber Matrix:**
+   ```env
+   BOT_PREFIX=!
+   DB_PATH=./optimus_void.db
+   BOT_NAME=Optimus-Void
+   MENU_IMAGE_URL=https://i.ibb.co/HpKQ6KTc/pic.jpg
+   OWNER_NAME=Your Cyber Signature
+   ```
 
-4. **Start the bot:**
+4. **Initiate Quantum Boot:**
    ```sh
-   # On Windows
-   npm start
-   
-   # On Linux/Mac
    npm start
    ```
 
-## Creating Plugins
+## 🛠️ Plugin Engineering
 
-### Plugin Structure
-Plugins are organized in the following directories under `src/plugins/`:
-- `admin/` - Administrative commands
-- `group/` - Group management features
-- `moderation/` - Moderation tools
-- `utilities/` - Utility functions
-- `media/` - Media handling features
+### Quantum Plugin Structure
+```
+src/plugins/
+├── admin/          # System Administration
+├── group/          # Collective Management
+├── moderation/     # Behavioral Control
+├── utilities/      # Cyber Utilities
+├── media/          # Holographic Processing
+```
 
-### Creating a New Plugin
-1. Choose the appropriate directory for your plugin
-2. Create a new .js file (e.g., `mycommand.js`)
-3. Use this template:
+### Crafting Cyber Plugins
 
 ```javascript
 const config = require('../../config/config');
 
 module.exports = {
-    command: 'commandname',
-    description: 'Brief description of what the command does',
-    usage: `${config.prefix}commandname <param1> <param2>`,
+    command: 'cyber_command',
+    description: 'Quantum-enhanced command execution',
+    usage: `${config.prefix}cyber_command <quantum_param>`,
     execute: async (sock, message, args) => {
         try {
-            // Your command logic here
-            // sock: WhatsApp connection socket
-            // message: Message object containing details about the command
-            // args: Array of command arguments
+            // Cyber processing logic
+            const quantumResult = await processQuantum(args);
             
-            // Send a reply
             return sock.sendMessage(message.key.remoteJid, { 
-                text: 'Your response here' 
+                text: `⚡ ${quantumResult}` 
             }, { 
                 quoted: message 
             });
         } catch (error) {
-            console.error('Error in commandname:', error);
             return sock.sendMessage(message.key.remoteJid, { 
-                text: 'An error occurred!' 
+                text: '⚠️ Quantum fluctuation detected!' 
             }, { 
                 quoted: message 
             });
@@ -204,53 +194,67 @@ module.exports = {
 };
 ```
 
-## Available Commands
+## 🤖 Command Cyber Network
 
-### Admin Commands
-| Command   | Description               | Usage                     |
-|-----------|---------------------------|---------------------------|
-| broadcast | Broadcast a message       | `!broadcast <message>`    |
-| eval      | Evaluate JS code         | `!eval <code>`           |
-| restart   | Restart the bot          | `!restart`               |
+### 🔧 Admin Commands
+| Command   | Cyber Function              | Usage                     |
+|-----------|------------------------------|---------------------------|
+| broadcast | Global Cyber Broadcast     | `!broadcast <message>`    |
+| eval      | Code Cyber Execution       | `!eval <code>`           |
+| shell     | System Cyber Interface     | `!shell <command>`       |
+| restart   | Quantum Reboot              | `!restart`               |
+| block     | Cyber Firewall             | `!block <@mention>`      |
+| unblock   | Firewall Deactivation       | `!unblock <@mention>`    |
+| join      | Collective Integration      | `!join <invite_link>`    |
 
-### Group Commands
-| Command  | Description                | Usage                      |
-|----------|----------------------------|----------------------------|
-| add      | Add member to group        | `!add <number>`           |
-| kick     | Remove member from group   | `!kick <@mention>`        |
-| promote  | Promote to admin          | `!promote <@mention>`     |
-| demote   | Demote from admin         | `!demote <@mention>`      |
-| setname  | Change group name         | `!setname <new name>`     |
-| setdesc  | Change group description  | `!setdesc <description>`  |
-| tagall   | Mention all members       | `!tagall [message]`       |
-| link     | Get group invite link     | `!link`                   |
-| revoke   | Reset group invite link   | `!revoke`                |
+### 👥 Group Commands
+| Command  | Collective Function         | Usage                      |
+|----------|-----------------------------|----------------------------|
+| add      | Member Cyber Addition      | `!add <number>`           |
+| kick     | Cyber Expulsion           | `!kick <@mention>`        |
+| promote  | Hierarchy Elevation        | `!promote <@mention>`     |
+| demote   | Hierarchy Reduction        | `!demote <@mention>`      |
+| setname  | Collective Renaming        | `!setname <new name>`     |
+| setdesc  | Cyber Description Update  | `!setdesc <description>`  |
+| tagall   | Mass Cyber Communication  | `!tagall [message]`       |
+| hidetag  | Stealth Communication      | `!hidetag [message]`      |
+| link     | Quantum Access Link        | `!link`                   |
+| revoke   | Link Quantum Reset         | `!revoke`                |
+| left     | Collective Disengagement   | `!left`                   |
+| setpp    | Holographic Profile Update | `!setpp [caption]`        |
 
-### Moderation Commands
-| Command | Description              | Usage                     |
-|---------|--------------------------|---------------------------|
-| warn    | Warn a member           | `!warn <@mention>`        |
-| unwarn  | Remove warning          | `!unwarn <@mention>`      |
-| warnings| Check warnings          | `!warnings [@mention]`    |
-| ban     | Ban member from bot     | `!ban <@mention>`         |
-| unban   | Unban member           | `!unban <@mention>`       |
+### 🛡️ Moderation Commands
+| Command | Behavioral Control         | Usage                     |
+|---------|----------------------------|---------------------------|
+| warn    | Cyber Warning System      | `!warn <@mention>`        |
+| unwarn  | Warning Cyber Reset       | `!unwarn <@mention>`      |
+| warnings| Behavioral Analysis        | `!warnings [@mention]`    |
+| ban     | Cyber Ban Matrix          | `!ban <@mention>`         |
+| unban   | Ban Matrix Deactivation    | `!unban <@mention>`       |
 
-### Utility Commands
-| Command | Description              | Usage                     |
-|---------|--------------------------|---------------------------|
-| help    | Show command list       | `!help [command]`         |
-| ping    | Check bot response      | `!ping`                   |
-| info    | Show bot info           | `!info`                   |
-| sticker | Create sticker          | `!sticker [caption]`      |
-| owner   | Show bot owner info     | `!owner`                  |
+### 🔧 Utility Commands
+| Command | Cyber Utility             | Usage                     |
+|---------|----------------------------|---------------------------|
+| help    | Command Cyber Database    | `!help [command]`         |
+| ping    | Quantum Latency Test       | `!ping`                   |
+| info    | System Cyber Status       | `!info`                   |
+| sticker | Holographic Sticker Gen    | `!sticker [caption]`      |
+| toimg   | Sticker Cyber Conversion  | `!toimg [reply]`         |
+| speed   | Performance Cyber Test    | `!speed`                  |
+| runtime | Uptime Cyber Monitor      | `!runtime`                |
+| owner   | Creator Cyber Signature   | `!owner`                  |
+| delete  | Message Cyber Erasure     | `!delete [reply]`         |
 
-### Media Commands
-| Command | Description              | Usage                     |
-|---------|--------------------------|---------------------------|
-| play    | Play YouTube audio      | `!play <query/url>`      |
-| video   | Download YouTube video  | `!video <query/url>`     |
-| ytmp3   | Download YouTube audio  | `!ytmp3 <url>`           |
-| ytmp4   | Download YouTube video  | `!ytmp4 <url>`           |
+### 🎵 Media Commands
+| Command | Holographic Function       | Usage                     |
+|---------|----------------------------|---------------------------|
+| play    | Audio Cyber Streaming     | `!play <query/url>`      |
+| video   | Video Cyber Projection    | `!video <query/url>`     |
+| ytmp3   | Audio Quantum Download     | `!ytmp3 <url>`           |
+| ytmp4   | Video Quantum Download     | `!ytmp4 <url>`           |
+| tts     | Cyber Voice Synthesis     | `!tts <text>`            |
+| remix   | Media Cyber Recomposition | `!remix [reply]`         |
+
 
 ## Deployment Options
 
@@ -374,7 +378,8 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ---
 
 <div align="center">
-    Made with ❤️ by Safwan Ganz
+    <h3>⚡ Love by Safwan Ganz ⚡</h3>
+    <p>⭐ Star this cyber network if it enhances your reality! ⭐</p>
     <br>
-    Give this repo a ⭐️ if you found it helpful!
+    <img src="https://img.shields.io/badge/Made%20in-2035-blue?style=for-the-badge&logo=future&logoColor=white" alt="Made in 2035">
 </div>
