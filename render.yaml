@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: optimus-void-bot
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_PREFIX
+        value: "!"
+      - key: DB_PATH
+        value: "./optimus_void.db"
+      - key: BOT_NAME
+        value: "Optimus-Void"
+      - key: OWNER_NAME
+        value: "Your Cyber Signature"
+    persistentDisk:
+      name: data
+      mountPath: /opt/render/project/src
+      sizeGB: 1

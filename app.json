@@ -1,0 +1,30 @@
+{
+  "name": "optimus-void-bot",
+  "description": "Next-Gen WhatsApp Bot with Cyber Capabilities",
+  "repository": "https://github.com/SafwanGanz/optimus-void",
+  "logo": "https://j.top4top.io/p_3534p2x9q1.png",
+  "keywords": ["whatsapp", "bot", "node", "cyber", "quantum"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "BOT_PREFIX": {
+      "description": "Bot command prefix",
+      "value": "!"
+    },
+    "DB_PATH": {
+      "description": "Database path",
+      "value": "./optimus_void.db"
+    },
+    "BOT_NAME": {
+      "description": "Bot name",
+      "value": "Optimus-Void"
+    },
+    "OWNER_NAME": {
+      "description": "Owner name",
+      "value": "Your Cyber Signature"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  optimus-void:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./auth_info_optimus_void:/app/auth_info_optimus_void
+      - ./optimus_void.db:/app/optimus_void.db
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped

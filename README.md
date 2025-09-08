@@ -45,13 +45,13 @@ npm start
             <td align="center">
                 <a href="https://heroku.com/deploy?template=https://github.com/SafwanGanz/optimus-void">
                     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" height="32">
-                    <br>Deploy
+                    <br>🌐 Heroku Cloud
                 </a>
             </td>
             <td align="center">
                 <a href="https://railway.app/new/template/IS2yRP?referralCode=bINYRC">
                     <img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32">
-                    <br>Deploy
+                    <br>🚂 Railway Express
                 </a>
             </td>
         </tr>
@@ -59,13 +59,13 @@ npm start
             <td align="center">
                 <a href="https://render.com/deploy?repo=https://github.com/SafwanGanz/optimus-void">
                     <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="32">
-                    <br>Deploy
+                    <br>🎨 Render Studios
                 </a>
             </td>
             <td align="center">
                 <a href="https://wa.me/917306771605?text=Hi!%20I%20would%20like%20to%20get%20access%20to%20deploy%20Optimus%20Void%20on%20VotionCloud">
                     <img src="https://img.shields.io/badge/VotionCloud-Request%20Access-blue?style=for-the-badge&logo=v" alt="Request VotionCloud Access" height="32">
-                    <br>Deploy
+                    <br>☁️ VotionCloud Quantum
                 </a>
             </td>
         </tr>
@@ -378,7 +378,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ---
 
 <div align="center">
-    <h3>⚡ Love by Safwan Ganz ⚡</h3>
+    <h3>⚡ Built with Quantum Love by Safwan Ganz ⚡</h3>
     <p>⭐ Star this cyber network if it enhances your reality! ⭐</p>
     <br>
     <img src="https://img.shields.io/badge/Made%20in-2035-blue?style=for-the-badge&logo=future&logoColor=white" alt="Made in 2035">
