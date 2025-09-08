@@ -45,13 +45,13 @@ npm start
             <td align="center">
                 <a href="https://heroku.com/deploy?template=https://github.com/SafwanGanz/optimus-void">
                     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" height="32">
-                    <br>🌐 Heroku Cloud
+                    <br>Deploy
                 </a>
             </td>
             <td align="center">
                 <a href="https://railway.app/new/template/IS2yRP?referralCode=bINYRC">
                     <img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32">
-                    <br>🚂 Railway Express
+                    <br>Deploy
                 </a>
             </td>
         </tr>
@@ -65,7 +65,7 @@ npm start
             <td align="center">
                 <a href="https://wa.me/917306771605?text=Hi!%20I%20would%20like%20to%20get%20access%20to%20deploy%20Optimus%20Void%20on%20VotionCloud">
                     <img src="https://img.shields.io/badge/VotionCloud-Request%20Access-blue?style=for-the-badge&logo=v" alt="Request VotionCloud Access" height="32">
-                    <br>☁️ VotionCloud Quantum
+                    <br>Deploy
                 </a>
             </td>
         </tr>
