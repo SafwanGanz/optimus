@@ -62,15 +62,15 @@ module.exports = async (authState) => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       const code = await sock.requestPairingCode(phoneNumber);
       if (code) {
-        console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-        console.log(`🔑 YOUR PAIRING CODE: ${code}`);
-        console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-        console.log('Enter this code on your WhatsApp mobile app:');
-        console.log('1. Open WhatsApp on your phone');
-        console.log('2. Go to Settings > Linked Devices > Link a Device');
-        console.log('3. Tap "Link with phone number" at the bottom');
-        console.log('4. Enter the pairing code shown above\n');
-        console.log('If you see "restart required" message, the bot will automatically restart.');
+        process.stdout.write('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
+        process.stdout.write(`🔑 YOUR PAIRING CODE: ${code}\n`);
+        process.stdout.write('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n');
+        process.stdout.write('Enter this code on your WhatsApp mobile app:\n');
+        process.stdout.write('1. Open WhatsApp on your phone\n');
+        process.stdout.write('2. Go to Settings > Linked Devices > Link a Device\n');
+        process.stdout.write('3. Tap "Link with phone number" at the bottom\n');
+        process.stdout.write('4. Enter the pairing code shown above\n\n');
+        process.stdout.write('If you see "restart required" message, the bot will automatically restart.\n');
         
         const pairingCodeRestartFlag = {};
         
@@ -96,7 +96,7 @@ module.exports = async (authState) => {
         throw new Error('No pairing code received from server');
       }
     } catch (error) {
-      logger.error(`Failed to request pairing code: ${error.message || error}`);
+      console.error(`Failed to request pairing code: ${error.message || error}`);
       console.log('\n❌ Failed to request pairing code. Falling back to QR code method...\n');
       sock.ev.emit('connection.update', { qr: true });
     }
