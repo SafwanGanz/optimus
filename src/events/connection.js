@@ -21,18 +21,18 @@ module.exports = (sock, saveCreds) => {
             const qrCode = await qrcode.toString(qr, { type: 'terminal', small: true });
             console.clear();
             
-            console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-            console.log('🤖 OPTIMUS-VOID | SCAN QR CODE');
-            console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-            console.log(qrCode);
-            console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-            console.log('1. Open WhatsApp on your phone');
-            console.log('2. Tap Menu or Settings and select Linked Devices');
-            console.log('3. Tap on Link a Device');
-            console.log('4. Point your phone camera to this QR code\n');
+            process.stdout.write('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
+            process.stdout.write('🤖 OPTIMUS-VOID | SCAN QR CODE\n');
+            process.stdout.write('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n');
+            process.stdout.write(qrCode + '\n');
+            process.stdout.write('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
+            process.stdout.write('1. Open WhatsApp on your phone\n');
+            process.stdout.write('2. Tap Menu or Settings and select Linked Devices\n');
+            process.stdout.write('3. Tap on Link a Device\n');
+            process.stdout.write('4. Point your phone camera to this QR code\n\n');
           
             if (sock.authState?.authMethod === 'pairing') {
-              console.log('⚠️ Pairing code authentication failed, falling back to QR code method.\n');
+              process.stdout.write('⚠️ Pairing code authentication failed, falling back to QR code method.\n\n');
             }
           }
         } catch (error) {
