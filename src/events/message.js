@@ -3,12 +3,16 @@ const store = require('../utils/store');
 const commandHandler = require('../services/commandHandler');
 const logger = require('../utils/logger');
 
+const processedMessages = new Set();
+
 module.exports = (sock) => {
   sock.ev.on('messages.upsert', async ({ messages, type }) => {
     if (type !== 'notify') return;
     
     for (const m of messages) {
       if (!m.message) continue;
+      if (processedMessages.has(m.key.id)) continue;
+      processedMessages.add(m.key.id);
       
       await store.saveMessage(m.key, m.message, m.messageTimestamp);
       
